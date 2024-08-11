@@ -47,4 +47,17 @@ public:
     bool operator!=(const Date& other) const {
         return !(*this == other);
     }
+ // Overload ++ operator to increment the date by one day
+    Date& operator++() {
+        day++;
+        if (day > daysInMonth(month, year)) {
+            day = 1;
+            month++;
+            if (month > 12) {
+                month = 1;
+                year++;
+            }
+        }
+        return *this;
+    }
 
