@@ -1,1 +1,116 @@
+#include <iostream>
 
+class Date {
+private:
+    int day;
+    int month;
+    int year;
+
+    // Helper function to check if a date is valid
+    bool isValidDate(int d, int m, int y) {
+        if (m < 1 || m > 12) return false;
+        if (d < 1) return false;
+        if (m == 2) {
+            if (y % 4 == 0 && (y % 100 != 0 || y % 400 == 0)) {
+                return d <= 29;
+            } else {
+                return d <= 28;
+            }
+        } else if (m == 4 || m == 6 || m == 9 || m == 11) {
+            return d <= 30;
+        } else {
+            return d <= 31;
+        }
+    }
+
+public:
+    Date(int d = 1, int m = 1, int y = 1970) : day(d), month(m), year(y) {
+        if (!isValidDate(d, m, y)) {
+            std::cerr << "Invalid date: " << d << "/" << m << "/" << y << std::endl;
+            exit(1);
+        }
+    }
+
+    // Overload relational operators
+    bool operator<(const Date& other) const {
+        if (year < other.year) return true;
+        if (year > other.year) return false;
+        if (month < other.month) return true;
+        if (month > other.month) return false;
+        return day < other.day;
+    }
+
+    bool operator<=(const Date& other) const {
+        return *this < other || *this == other;
+    }
+
+    bool operator>(const Date& other) const {
+        return !(*this <= other);
+    }
+
+    bool operator>=(const Date& other) const {
+        return !(*this < other);
+    }
+
+    bool operator==(const Date& other) const {
+        return day == other.day && month == other.month && year == other.year;
+    }
+
+    bool operator!=(const Date& other) const {
+        return !(*this == other);
+    }
+
+    // Overload ++ operator
+    Date& operator++() {
+        day++;
+        if (!isValidDate(day, month, year)) {
+            month++;
+            day = 1;
+            if (month > 12) {
+                year++;
+                month = 1;
+            }
+        }
+        return *this;
+    }
+
+    // Overload + operator
+    Date operator+(int days) const {
+        Date result = *this;
+        for (int i = 0; i < days; i++) {
+            result++;
+        }
+        return result;
+    }
+
+    // Conversion operator to int
+    operator int() const {
+        int days = 0;
+        for (int m = 1; m < month; m++) {
+            if (m == 2) {
+                if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+                    days += 29;
+                } else {
+                    days += 28;
+                }
+            } else if (m == 4 || m == 6 || m == 9 || m == 11) {
+                days += 30;
+            } else {
+                days += 31;
+            }
+        }
+        days += day - 1;
+        return days;
+    }
+};
+
+int main() {
+    Date dt(25, 12, 2022);
+    int days = dt;
+    std::cout << "Days elapsed in the current year: " << days << std::endl;
+
+    Date dt2 = dt + 10;
+    std::cout << "Next date: " << dt2.day << "/" << dt2.month << "/" << dt2.year << std::endl;
+
+    return 0;
+}
