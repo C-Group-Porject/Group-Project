@@ -36,3 +36,18 @@ int count = 0;
             std::cerr << "Error reading price or number of pages for book " << books[count].book_id << std::endl;
             break;
         }
+        // Attempt to read publisher and year of publishing
+        file >> books[count].publisher >> books[count].year_of_publishing;
+
+        // Debug output to verify reading process
+        std::cout << "Read book: " << books[count].book_id << " "
+                  << books[count].author_name << ", " << books[count].price << " "
+                  << books[count].no_of_pages << " " << books[count].publisher << " "
+                  << books[count].year_of_publishing << std::endl;
+
+        count++;
+    }
+    file.close();
+    return count;
+}
+
