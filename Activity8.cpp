@@ -43,5 +43,16 @@ public:
                 return true;
             }
         }
+
+    // Find the average of the elements in the vector
+    double average() {
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += data[i];
+        }
+        return (double)sum / size;
+    }
+
         return false;
     }
+
