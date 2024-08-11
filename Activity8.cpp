@@ -24,3 +24,24 @@ public:
             }
         }
     }
+
+    // Find the smallest element in the vector
+    int smallest() {
+        int min = data[0];
+        for (int i = 1; i < size; i++) {
+            if (data[i] < min) {
+                min = data[i];
+            }
+        }
+        return min;
+    }
+
+    // Search for an element in the vector
+    bool search(int element) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == element) {
+                return true;
+            }
+        }
+        return false;
+    }
