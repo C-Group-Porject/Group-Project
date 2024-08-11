@@ -36,3 +36,10 @@ int main() {
             std::cin >> num2;
             std::cout << "Third integer: ";
             std::cin >> num3;
+
+            double largest = find_largest(num1, num2, num3);
+            std::cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << std::endl;
+            std::cout << "The largest number is: " << largest << std::endl;
+            break;
+        }
+
