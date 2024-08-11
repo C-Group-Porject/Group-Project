@@ -17,4 +17,34 @@ private:
         // April, June, September, November have 30 days, others have 31
         return (month == 4 || month == 6 || month == 9 || month == 11) ? 30 : 31;
     }
+public:
+    // Constructor
+    Date(int d = 1, int m = 1, int y = 2000) : day(d), month(m), year(y) {}
+
+    // Overload relational operators
+    bool operator<(const Date& other) const {
+        return (year < other.year) || 
+               (year == other.year && month < other.month) || 
+               (year == other.year && month == other.month && day < other.day);
+    }
+
+    bool operator<=(const Date& other) const {
+        return *this < other || *this == other;
+    }
+
+    bool operator>(const Date& other) const {
+        return !(*this <= other);
+    }
+
+    bool operator>=(const Date& other) const {
+        return !(*this < other);
+    }
+
+    bool operator==(const Date& other) const {
+        return day == other.day && month == other.month && year == other.year;
+    }
+
+    bool operator!=(const Date& other) const {
+        return !(*this == other);
+    }
 
