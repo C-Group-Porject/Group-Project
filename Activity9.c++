@@ -37,9 +37,21 @@ int main() {
             std::cout << "Third integer: ";
             std::cin >> num3;
 
-            double largest = find_largest(num1, num2, num3);
+             int largest = find_largest(num1, num2, num3);
             std::cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << std::endl;
             std::cout << "The largest number is: " << largest << std::endl;
             break;
         }
+        case 2: {
+            // Handle floats
+            float num1, num2, num3;
+            std::cout << "Enter three floats:" << std::endl;
+            std::cout << "First float: ";
+            std::cin >> num1;
+            std::cout << "Second float: ";
+            std::cin >> num2;
+            std::cout << "Third float: ";
+            std::cin >> num3;
+
+            
 
