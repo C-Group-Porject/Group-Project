@@ -1,0 +1,11 @@
+Choose the type of numbers you want to compare:
+1. Integer
+2. Float
+3. Double
+Enter your choice (1/2/3): 1
+Enter three integers:
+First integer: 3
+Second integer: 4
+Third integer: 6
+You entered: 3, 4, 6
+The largest number is: 6
