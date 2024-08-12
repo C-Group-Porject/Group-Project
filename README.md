@@ -3,7 +3,7 @@ GROUP MEMEBERS:
   1) Ashwani Kumar Arya (23BCE10685)
   2) Anushka Jha (23BSA10070)
   3) Divyansh Kumar Srivastava (23BCE10887)
-  4) Suhil Shukre (23BCE10212)
+  4) Sahil Shukre (23BCE10212)
   5) Anjali Kushwaha (23BCE 10067)
 
 
