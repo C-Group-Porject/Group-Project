@@ -53,7 +53,7 @@ int main() {
             std::cout << "Third float: ";
             std::cin >> num3;
             
- float largest = find_largest(num1, num2, num3);
+            float largest = find_largest(num1, num2, num3);
             std::cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << std::endl;
             std::cout << "The largest number is: " << largest << std::endl;
             break;
@@ -70,16 +70,16 @@ int main() {
             std::cin >> num3;
 
 
-    double largest = find_largest(num1, num2, num3);
-    std::cout <<"You entered: "<< num1 <<", "<< num2 <<", "<< num3 <<std::endl;
-    std::cout <<" The largest number is: "<< largest << std::endl;
-    break;
-}
-default:
-    std::cout << "Invalid choice. Please run the program again and select 1, 2, 3."<<std::endl;
-break;
+            double largest = find_largest(num1, num2, num3);
+            std::cout <<"You entered: "<< num1 <<", "<< num2 <<", "<< num3 <<std::endl;
+            std::cout <<" The largest number is: "<< largest << std::endl;
+            break;
+        }
+        default:
+            std::cout << "Invalid choice. Please run the program again and select 1, 2, 3."<<std::endl;
+            break;
     }
-return 0;
+    return 0;
 }
             
 
