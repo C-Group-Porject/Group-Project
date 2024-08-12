@@ -1,0 +1,6 @@
+Enter the date (day month year): 21 02 24
+Original date: 21/2/24
+After incrementing by one day: 22/2/24
+Enter the number of days to add: 3
+After adding 3 days: 25/2/24
+Days elapsed in the current year up to this date: 56
