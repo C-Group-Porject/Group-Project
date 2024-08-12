@@ -52,7 +52,7 @@ T smallestElement() {
         return sum / size;
     }
 
-        void display() {
+    void display() {
         for (int i = 0; i < size; i++) {
             cout << elements[i] << " ";
         }
@@ -67,10 +67,10 @@ T smallestElement() {
     cout << "Enter the number of elements: ";
     cin >> n;
     for (int i = 0; i < n; i++) {
-    cout << "Enter element " << i + 1 << ": ";
-    cin >> element;
-    vec.addElement(element);
-}
+        cout << "Enter element " << i + 1 << ": ";
+        cin >> element;
+        vec.addElement(element);
+    }
 
 
     cout << "Smallest element: " << vec.smallestElement() << endl;
