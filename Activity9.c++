@@ -1,5 +1,6 @@
 #include <iostream>
-#include <algorithm> // For std::max
+#include <algorithm> 
+using namespace std;
 
 // Function to find the largest of three integers
 int find_largest(int a, int b, int c) {
@@ -8,75 +9,75 @@ int find_largest(int a, int b, int c) {
 
 // Function to find the largest of three floats
 float find_largest(float a, float b, float c) {
-    return std::max(std::max(a, b), c);
+    return max(max(a, b), c);
 }
 
 // Function to find the largest of three doubles
 double find_largest(double a, double b, double c) {
-    return std::max(std::max(a, b), c);
+    return max(max(a, b), c);
 }
 int main() {
     int choice;
     
-    std::cout << "Choose the type of numbers you want to compare:" << std::endl;
-    std::cout << "1. Integer" << std::endl;
-    std::cout << "2. Float" << std::endl;
-    std::cout << "3. Double" << std::endl;
-    std::cout << "Enter your choice (1/2/3): ";
-    std::cin >> choice;
+    cout << "Choose the type of numbers you want to compare:" << endl;
+    cout << "1. Integer" << endl;
+    cout << "2. Float" << endl;
+    cout << "3. Double" << endl;
+    cout << "Enter your choice (1/2/3): ";
+    cin >> choice;
 
     switch (choice) {
         case 1: {
             // Handle integers
             int num1, num2, num3;
-            std::cout << "Enter three integers:" << std::endl;
-            std::cout << "First integer: ";
-            std::cin >> num1;
-            std::cout << "Second integer: ";
-            std::cin >> num2;
-            std::cout << "Third integer: ";
-            std::cin >> num3;
+            cout << "Enter three integers:" << endl;
+            cout << "First integer: ";
+            cin >> num1;
+            cout << "Second integer: ";
+            cin >> num2;
+            cout << "Third integer: ";
+            cin >> num3;
 
-             int largest = find_largest(num1, num2, num3);
-            std::cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << std::endl;
-            std::cout << "The largest number is: " << largest << std::endl;
+            int largest = find_largest(num1, num2, num3);
+            cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << endl;
+            cout << "The largest number is: " << largest << endl;
             break;
         }
         case 2: {
             // Handle floats
             float num1, num2, num3;
-            std::cout << "Enter three floats:" << std::endl;
-            std::cout << "First float: ";
-            std::cin >> num1;
-            std::cout << "Second float: ";
-            std::cin >> num2;
-            std::cout << "Third float: ";
-            std::cin >> num3;
+            cout << "Enter three floats:" << endl;
+            cout << "First float: ";
+            cin >> num1;
+            cout << "Second float: ";
+            cin >> num2;
+            cout << "Third float: ";
+            cin >> num3;
             
             float largest = find_largest(num1, num2, num3);
-            std::cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << std::endl;
-            std::cout << "The largest number is: " << largest << std::endl;
+            cout << "You entered: " << num1 << ", " << num2 << ", " << num3 << endl;
+            cout << "The largest number is: " << largest << endl;
             break;
         }
         case 3: {
             // Handle doubles
             double num1, num2, num3;
-            std::cout << "Enter three doubles:" << std::endl;
-            std::cout << "First double: ";
-            std::cin >> num1;
-            std::cout << "Second double: ";
-            std::cin >> num2;
-            std::cout << "Third double: ";
-            std::cin >> num3;
+            cout << "Enter three doubles:" << endl;
+            cout << "First double: ";
+            cin >> num1;
+            cout << "Second double: ";
+            cin >> num2;
+            cout << "Third double: ";
+            cin >> num3;
 
 
             double largest = find_largest(num1, num2, num3);
-            std::cout <<"You entered: "<< num1 <<", "<< num2 <<", "<< num3 <<std::endl;
-            std::cout <<" The largest number is: "<< largest << std::endl;
+            cout <<"You entered: "<< num1 <<", "<< num2 <<", "<< num3 << endl;
+            cout <<" The largest number is: "<< largest << endl;
             break;
         }
             default:
-            std::cout << "Invalid choice. Please run the program again and select 1, 2, 3."<<std::endl;
+            cout << "Invalid choice. Please run the program again and select 1, 2, 3."<< endl;
             break;
     }
             return 0;
