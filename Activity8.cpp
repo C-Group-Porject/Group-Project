@@ -29,3 +29,20 @@ T smallestElement() {
         }
         return smallest;
     }
+
+    cout << "Smallest element: " << vec.smallestElement() << endl;
+    cout << "Enter element to search: ";
+    cin >> element;
+    int index = vec.searchElement(element);
+    if (index != -1) {
+        cout << "Element found at index: " << index << endl;
+    } else {
+        cout << "Element not found" << endl;
+    }
+    cout << "Average of elements: " << vec.averageElement() << endl;
+
+    cout << "Vector elements: ";
+    vec.display();
+
+    return 0;
+}
