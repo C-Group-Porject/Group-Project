@@ -15,3 +15,17 @@ public:
             elements[size++] = element;
         }
     }
+T smallestElement() {
+        if (size == 0) {
+            cout << "Vector is empty." << endl;
+            return T();
+        }
+
+        T smallest = elements[0];
+        for (int i = 1; i < size; i++) {
+            if (elements[i] < smallest) {
+                smallest = elements[i];
+            }
+        }
+        return smallest;
+    }
