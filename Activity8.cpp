@@ -54,6 +54,37 @@ public:
         }
         return (double)sum / size;
     }
+void print() {
+        for (int i = 0; i < size; i++) {
+            cout << data[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    int size;
+    cout << "Enter the size of the vector: ";
+    cin >> size;
+
+    Vector intVector(size);
+    cout << "Enter " << size << " elements: ";
+    for (int i = 0; i < size; i++) {
+        cin >> intVector.data[i];
+    }
+
+    cout << "Input vector: ";
+    intVector.print();
+
+    cout << "Smallest element: " << intVector.smallest() << endl;
+    int searchElement;
+    cout << "Enter an element to search: ";
+    cin >> searchElement;
+    cout << "Search for " << searchElement << ": " << (intVector.search(searchElement) ? "Found" : "Not found") << endl;
+    cout << "Average: " << intVector.average() << endl;
+
+    return 0;
+}
 
 
 
