@@ -1,0 +1,11 @@
+Enter the number of elements: 5
+Enter element 1: 10
+Enter element 2: 20
+Enter element 3: 5
+Enter element 4: 15
+Enter element 5: 25
+Smallest element: 5
+Enter element to search: 15
+Element found at index: 3
+Average of elements: 15
+Vector elements: 10 20 5 15 25 
