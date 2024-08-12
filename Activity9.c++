@@ -54,7 +54,7 @@ int main() {
             std::cin >> num3;
 
 ------------------------------------------------
-    Anushka's Part (Delete this after you have pasted your part)
+    Anushka's Part (Delete this after you have pasted your part);
 ------------------------------------------------
 
     double largest = find_largest(num1, num2, num3);
