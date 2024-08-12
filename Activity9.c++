@@ -75,11 +75,11 @@ int main() {
             std::cout <<" The largest number is: "<< largest << std::endl;
             break;
         }
-        default:
+            default:
             std::cout << "Invalid choice. Please run the program again and select 1, 2, 3."<<std::endl;
             break;
     }
-    return 0;
+            return 0;
 }
             
 
