@@ -30,6 +30,28 @@ T smallestElement() {
         return smallest;
     }
 
+    int searchElement(T element) {
+        for (int i = 0; i < size; i++) {
+            if (elements[i] == element) {
+                return i;
+            }
+        }
+        return -1; // Element not found
+    }
+
+    T averageElement() {
+        if (size == 0) {
+            cout << "Vector is empty." << endl;
+            return T();
+        }
+
+        T sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += elements[i];
+        }
+        return sum / size;
+    }
+
     cout << "Smallest element: " << vec.smallestElement() << endl;
     cout << "Enter element to search: ";
     cin >> element;
