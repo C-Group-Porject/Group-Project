@@ -1,0 +1,9 @@
+CREATE A TEXT FILE CALLED "books.txt" AND INPUT THE FOLLOWING DATA:
+
+101 John Smith, 25.99 300 Pearson, 2018
+102 Alice Johnson, 15.50 200 Oxford, 2020
+103 Michael Brown, 20.00 250 McGraw-Hill, 2017
+104 Emily Davis, 18.75 400 Springer, 2021
+105 Chris Wilson, 22.25 350 Wiley, 2019
+
+IT WILL CREATE A FILE CALLED "sorted_books.txt" AND WILL HAVE ALL BOOKS SORTED ACCORDING TO AUTHOR NAME.
