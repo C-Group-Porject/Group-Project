@@ -13,6 +13,6 @@ GROUP MEMEBERS:
     • Overload ++ operator to increment a date by one day
     • Overload + to add given number of days to find the next date
     • Provide the necessary function to use the statement like days=dt; where days is an int
-   variable and dt is an object of date class. The statement is intended to assign the number of days
-  elapsed in the current year of the date to the variable days. Note that this is a case of conversion
+  variable and dt is an object of date class. The statement is intended to assign the number of days 
+  elapsed in the current year of the date to the variable days. Note that this is a case of conversion 
   from derived type to basic type
