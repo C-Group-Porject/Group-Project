@@ -60,4 +60,64 @@ public:
         }
         return *this;
     }
+ // Overload + operator to add a given number of days
+    Date operator+(int days) const {
+        Date newDate = *this;
+        while (days > 0) {
+            ++newDate;
+            days--;
+        }
+        return newDate;
+    }
+
+    // Conversion to int to get the number of days elapsed in the current year
+    operator int() const {
+        int daysElapsed = day;
+        for (int m = 1; m < month; m++) {
+            daysElapsed += daysInMonth(m, year);
+        }
+        return daysElapsed;
+    }
+
+    // Function to display the date
+    void display() const {
+        std::cout << day << "/" << month << "/" << year << std::endl;
+    }
+};
+
+int main() {
+    int d, m, y, daysToAdd;
+
+    // Get user input for the date
+    std::cout << "Enter the date (day month year): ";
+    std::cin >> d >> m >> y;
+
+    // Create a Date object with user input
+    Date dt(d, m, y);
+
+    // Display the original date
+    std::cout << "Original date: ";
+    dt.display();
+
+    // Incrementing the date by one day
+    ++dt;
+    std::cout << "After incrementing by one day: ";
+    dt.display();
+
+    // Get user input for the number of days to add
+    std::cout << "Enter the number of days to add: ";
+    std::cin >> daysToAdd;
+
+    // Adding the specified number of days to the date
+    Date newDate = dt + daysToAdd;
+    std::cout << "After adding " << daysToAdd << " days: ";
+    newDate.display();
+
+    // Converting Date to int to get the number of days elapsed in the current year
+    int daysElapsed = newDate;
+    std::cout << "Days elapsed in the current year up to this date: " << daysElapsed << std::endl;
+
+    return 0;
+}
+
 
