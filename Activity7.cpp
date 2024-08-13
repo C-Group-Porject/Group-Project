@@ -48,10 +48,10 @@ int readBooks(Book books[], int maxBooks, const string& filename) {
                   << books[count].no_of_pages << " " << books[count].publisher << " "
                   << books[count].year_of_publishing << endl;
 
-count++;
-    }
-    file.close();
-    return count;
+        count++;
+        }
+        file.close();
+        return count;
 }
 
 // Function to write books to a file
