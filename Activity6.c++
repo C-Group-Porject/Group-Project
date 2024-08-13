@@ -82,7 +82,7 @@ public:
 
 // Function to display the date
 void display() const{
-    cout << << "/" << month << "/" << year << endl;
+    cout << day << "/" << month << "/" << year << endl;
 }
 };
 
@@ -101,8 +101,8 @@ int main() {
 
     //Incrementing the date by one day
     ++dt;
-    cout << "After incrementing by one day: "
-        dt.display();
+    cout << "After incrementing by one day: ";
+    dt.display();
     //Get user input for the number of days to add
     cout << "Enter the number of days to add: ";
     cin>> daysToAdd;
