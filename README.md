@@ -4,7 +4,7 @@ GROUP MEMEBERS:
   2) Anushka Jha (23BSA10070)
   3) Divyansh Kumar Srivastava (23BCE10887)
   4) Sahil Shukre (23BCE10212)
-  5) Anjali Kushwaha (23BCE 10067)
+  5) Anjali Kushwaha (23BCE10067)
 
 
 # Activity 6:
