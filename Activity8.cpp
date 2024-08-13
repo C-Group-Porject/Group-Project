@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Template class definition for a Vector
 template <typename T>
 class Vector {
 private:
@@ -8,6 +9,7 @@ private:
     int size;
 
 public:
+// Constructor to initialize the vector size to 0
     Vector() : size(0) {}
 
     void addElement(T element) {
@@ -15,6 +17,8 @@ public:
             elements[size++] = element;
         }
     }
+
+// Function to find the smallest element in the vector
 T smallestElement() {
         if (size == 0) {
             cout << "Vector is empty." << endl;
@@ -30,6 +34,7 @@ T smallestElement() {
         return smallest;
     }
 
+// Function to search for an element in the vector
     int searchElement(T element) {
         for (int i = 0; i < size; i++) {
             if (elements[i] == element) {
@@ -39,6 +44,7 @@ T smallestElement() {
         return -1; // Element not found
     }
 
+// Function to calculate the average of elements in the vector
     T averageElement() {
         if (size == 0) {
             cout << "Vector is empty." << endl;
@@ -52,6 +58,7 @@ T smallestElement() {
         return sum / size;
     }
 
+// Function to display the elements of the vector
     void display() {
         for (int i = 0; i < size; i++) {
             cout << elements[i] << " ";
