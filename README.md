@@ -6,6 +6,8 @@ GROUP MEMEBERS:
   4) Sahil Shukre (23BCE10212)
   5) Anjali Kushwaha (23BCE10067)
 
+SLOT:
+	B21+B22+B23+E21+E22
 
 # Activity 6:
   Create a class by name date with the member data day, month and year. Perform the following:
